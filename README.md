@@ -2,31 +2,133 @@
 
 ## 信息收集
 
-### 基础信息
+### [基础信息](01-信息收集/01-基础信息/01-基础信息.md)
 
-- HTTP头
+- HTTP
 
-	- Referer
+	- HTTP 报文
 
-	- X-Forwarded-For
+		- [HTTP 介绍](https://www.jianshu.com/p/3b02648d405b)
 
-	- User-Agent
+		- HTTP 通用头域
 
-	- Cookie
+			- Cache-Control头域
 
-		- JWT
+			- Date头域
 
-- HTTP内容
+			- Pragma头域
 
-	- 价格、金钱、数量，打折等
+		- HTTP 请求消息
+
+	- HTTP 头
+
+		- Referer
+
+			- [Referer 介绍](https://www.ruanyifeng.com/blog/2019/06/http-referer.html)
+
+			- Referer 发生场景
+
+			- Referer 信息泄露
+
+			- Referer 伪造
+
+		- X-Forwarded-For
+
+			- X-Forwarded-For 介绍
+
+			- X-Forwarded-For 请求格式
+
+			- X-Forwarded-For 信息泄露
+
+			- X-Forwarded-For ip伪造
+
+				- X-Forwarded-For 注入
+
+		- User-Agent
+
+			- [User-Agent 介绍](https://blog.csdn.net/Ssuper_X/article/details/109694479)
+
+			- User-Agent 组成解释
+
+			- [User-Agent 列表](https://www.cnblogs.com/adolfmc/p/12052468.html)
+
+			- User-Agent 信息泄露
+
+			- User-Agent 伪造
+
+		- Cookie
+
+			- Cookie 介绍
+
+			- Cookie 生命周期
+
+			- Cookie 信息泄露
+
+			- Cookie 伪造
+
+				- [JWT伪造](https://blog.csdn.net/Top_L398/article/details/109361680)
+
+	- [HTTP 响应码](https://www.runoob.com/http/http-status-codes.html)
+
+		- 200：请求被正常处理
+
+		- 204：请求被受理但没有资源可以返回
+
+		- 206：客户端只是请求资源的一部分，服务器只对请求的部分资源执行GET方法，相应报文中通过Content-Range指定范围的资源。
+
+		- 301：永久性重定向
+
+		- 302：临时重定向
+
+		- 303：与302状态码有相似功能，只是它希望客户端在请求一个URI的时候，能通过GET方法重定向到另一个URI上
+
+		- 304：发送附带条件的请求时，条件不满足时返回，与重定向无关
+
+		- 307：临时重定向，与302类似，只是强制要求使用POST方法
+
+		- 400：请求报文语法有误，服务器无法识别
+
+		- 401：请求需要认证
+
+		- 403：请求的对应资源禁止被访问
+
+		- 404：服务器无法找到对应资源
+
+		- 500：服务器内部错误
+
+		- 503：服务器正忙
+
+	- HTTP 网页内容
 
 - URL参数
 
-- HTTP响应码
+	- URL 通用格式
 
-	- 302中的信息
+	- URL 格式解析
+
+		- URL 协议
+
+		- URL 用户名和密码
+
+		- URL 主机域名或者ip地址、端口
+
+		- URL 路径
+
+		- URL 参数
+
+		- URL 查询
 
 - 审查元素（F12）
+
+	- 审查元素介绍
+
+	- [JS敏感信息泄露](https://zhuanlan.zhihu.com/p/51176109)
+
+		- JS文件泄露后台管理敏感路径及API
+
+		- 页面内JS泄露http-only保护的cookie
+
+		- 页面内JS以及AJAX请求泄露用户敏感信息
 
 - 检查网页源代码
 
