@@ -2,7 +2,7 @@
 
 ## 信息收集
 
-### [基础信息](01-信息收集/01-基础信息/01-基础信息.md)
+### [基础信息](file:E:\学习\CTF_web_study\01-信息收集\01-基础信息\01-基础信息.md)
 
 - HTTP
 
@@ -134,159 +134,307 @@
 
 ### 文件读取
 
-#### [目录扫描](01-信息收集/02-文件读取/01-目录扫描.md)
+- [目录扫描](file:E:\学习\CTF_web_study\01-信息收集\02-文件读取\01-目录扫描.md)
 
-- 御剑（两个）
+	- 御剑（两个）
 
-	- [御剑的使用](https://blog.csdn.net/qq_45076423/article/details/103018509#:~:text=%E6%88%91%E4%BB%AC%E4%BD%BF%E7%94%A8%E5%BE%A1%E5%89%91%E6%89%AB%E6%8F%8F%E5%99%A8%EF%BC%8C%E4%B8%BB%E8%A6%81%E6%98%AF%E6%89%AB%E6%8F%8F%E7%BD%91%E7%AB%99%E6%95%8F%E6%84%9F%E7%9B%AE%E5%BD%95%EF%BC%8C%E5%8C%85%E6%8B%AC%E7%BD%91%E7%AB%99%E5%90%8E%E5%8F%B0%E7%AD%89%E3%80%82%20%E5%85%B6%E6%89%AB%E6%8F%8F%E5%8E%9F%E7%90%86%E4%B9%9F%E6%98%AF%E7%88%86%E7%A0%B4%EF%BC%8C%E5%8D%B3%E9%80%9A%E8%BF%87%E6%95%8F%E6%84%9F%E7%9B%AE%E5%BD%95%E7%9A%84%E5%AD%97%E5%85%B8%E5%8E%BB%E5%8C%B9%E9%85%8D%E3%80%82%20%E5%BE%A1%E5%89%91%E5%90%8E%E5%8F%B0%E6%89%AB%E6%8F%8F%E4%B9%8B%E5%89%8D%EF%BC%8C%E7%88%AC%E8%99%AB%E4%BC%9A%E8%AE%BF%E9%97%AErobots%20txt%E6%96%87%E4%BB%B6%E3%80%82,1%E3%80%81%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%A7%A3%E5%8E%8B%E6%89%93%E5%BC%80%E8%BD%AF%E4%BB%B6%202%E3%80%81%E6%89%93%E5%BC%80%E4%BB%A5%E5%90%8E%E5%9C%A8%E5%9F%9F%E5%90%8D%E8%BE%93%E5%85%A5%E6%A1%86%E4%B8%AD%E5%A1%AB%E5%85%A5%E8%A6%81%E6%89%AB%E6%8F%8F%E7%9A%84%E5%90%8E%E5%8F%B0%E5%9C%B0%E5%9D%80%203%E3%80%81%E5%9C%A8%E4%B8%8B%E9%9D%A2%E5%8F%AF%E4%BB%A5%E9%80%89%E6%8B%A9%E6%89%AB%E6%8F%8F%E7%BA%BF%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%89%AB%E6%8F%8F%E8%B6%85%E6%97%B6%E9%97%B4%EF%BC%8C%E8%BF%98%E6%9C%89%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E7%AD%89%204%E3%80%81%E5%85%A8%E9%83%A8%E9%80%89%E6%8B%A9%E5%A5%BD%E4%BB%A5%E5%90%8E%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%82%B9%E5%87%BB%E5%BC%80%E5%A7%8B%E6%89%AB%E6%8F%8F%E4%BA%86%E3%80%82)
+		- [御剑的使用](https://blog.csdn.net/qq_45076423/article/details/103018509#:~:text=%E6%88%91%E4%BB%AC%E4%BD%BF%E7%94%A8%E5%BE%A1%E5%89%91%E6%89%AB%E6%8F%8F%E5%99%A8%EF%BC%8C%E4%B8%BB%E8%A6%81%E6%98%AF%E6%89%AB%E6%8F%8F%E7%BD%91%E7%AB%99%E6%95%8F%E6%84%9F%E7%9B%AE%E5%BD%95%EF%BC%8C%E5%8C%85%E6%8B%AC%E7%BD%91%E7%AB%99%E5%90%8E%E5%8F%B0%E7%AD%89%E3%80%82%20%E5%85%B6%E6%89%AB%E6%8F%8F%E5%8E%9F%E7%90%86%E4%B9%9F%E6%98%AF%E7%88%86%E7%A0%B4%EF%BC%8C%E5%8D%B3%E9%80%9A%E8%BF%87%E6%95%8F%E6%84%9F%E7%9B%AE%E5%BD%95%E7%9A%84%E5%AD%97%E5%85%B8%E5%8E%BB%E5%8C%B9%E9%85%8D%E3%80%82%20%E5%BE%A1%E5%89%91%E5%90%8E%E5%8F%B0%E6%89%AB%E6%8F%8F%E4%B9%8B%E5%89%8D%EF%BC%8C%E7%88%AC%E8%99%AB%E4%BC%9A%E8%AE%BF%E9%97%AErobots%20txt%E6%96%87%E4%BB%B6%E3%80%82,1%E3%80%81%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%A7%A3%E5%8E%8B%E6%89%93%E5%BC%80%E8%BD%AF%E4%BB%B6%202%E3%80%81%E6%89%93%E5%BC%80%E4%BB%A5%E5%90%8E%E5%9C%A8%E5%9F%9F%E5%90%8D%E8%BE%93%E5%85%A5%E6%A1%86%E4%B8%AD%E5%A1%AB%E5%85%A5%E8%A6%81%E6%89%AB%E6%8F%8F%E7%9A%84%E5%90%8E%E5%8F%B0%E5%9C%B0%E5%9D%80%203%E3%80%81%E5%9C%A8%E4%B8%8B%E9%9D%A2%E5%8F%AF%E4%BB%A5%E9%80%89%E6%8B%A9%E6%89%AB%E6%8F%8F%E7%BA%BF%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%89%AB%E6%8F%8F%E8%B6%85%E6%97%B6%E9%97%B4%EF%BC%8C%E8%BF%98%E6%9C%89%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E7%AD%89%204%E3%80%81%E5%85%A8%E9%83%A8%E9%80%89%E6%8B%A9%E5%A5%BD%E4%BB%A5%E5%90%8E%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%82%B9%E5%87%BB%E5%BC%80%E5%A7%8B%E6%89%AB%E6%8F%8F%E4%BA%86%E3%80%82)
 
-- dirsearch
+	- dirsearch
 
-	- [使用方法](https://blog.csdn.net/anquanzushiye/article/details/104151644)
+		- [使用方法](https://blog.csdn.net/anquanzushiye/article/details/104151644)
 
-- postman
+	- postman
 
-	- [安装使用](https://zhuanlan.zhihu.com/p/401385193)
+		- [安装使用](https://zhuanlan.zhihu.com/p/401385193)
 
-	- [对于目录扫描的使用](https://blog.csdn.net/cai_iac/article/details/81030619)
+		- [对于目录扫描的使用](https://blog.csdn.net/cai_iac/article/details/81030619)
 
-#### [敏感信息](01-信息收集/02-文件读取/02-敏感信息.md)
+- [敏感信息](file:E:\学习\CTF_web_study\01-信息收集\02-文件读取\02-敏感信息.md)
 
-- phpinfo
+	- phpinfo
 
-	- phpinfo 描述
+		- phpinfo 描述
 
-	- phpinfo 检测方法
+		- phpinfo 检测方法
 
-	- [phpinfo 信息泄露](https://blog.51cto.com/z2ppp/2063173)
+		- [phpinfo 信息泄露](https://blog.51cto.com/z2ppp/2063173)
 
-		- 操作系统版本
+			- 操作系统版本
 
-		- 网站真实ip
+			- 网站真实ip
 
-		- 网站路径
+			- 网站路径
 
-		- 应用信息
+			- 应用信息
 
-		- 一些敏感配置
+			- 一些敏感配置
 
-		- php版本信息
+			- php版本信息
 
-- robots.txt
+	- robots.txt
 
-	- robots.txt 介绍
+		- robots.txt 介绍
 
-	- robots.txt 信息泄露
+		- robots.txt 信息泄露
 
-- 等
+	- 等
 
-#### [源码泄露](01-信息收集/02-文件读取/03-源码泄露.md)
+- [源码泄露](file:E:\学习\CTF_web_study\01-信息收集\02-文件读取\03-源码泄露.md)
 
-- Git 源码泄露
+	- Git 源码泄露
 
-	- 介绍
+		- 介绍
 
-	- 漏洞利用工具
+		- 漏洞利用工具
 
-		- [GitHack](https://github.com/lijiejie/GitHack)
+			- [GitHack](https://github.com/lijiejie/GitHack)
 
-		- [GitHacker](https://github.com/wangyihang/GitHacker)
+			- [GitHacker](https://github.com/wangyihang/GitHacker)
 
-		- [dvcs-ripper](https://github.com/kost/dvcs-ripper)
+			- [dvcs-ripper](https://github.com/kost/dvcs-ripper)
 
-		- [Dumpall](https://github.com/0xHJK/dumpall)
+			- [Dumpall](https://github.com/0xHJK/dumpall)
 
-- SVN 源码泄露
+	- SVN 源码泄露
 
-	- 介绍
+		- 介绍
 
-	- 漏洞利用工具
+		- 漏洞利用工具
 
-		- [SvnHack](https://github.com/callmefeifei/SvnHack)
+			- [SvnHack](https://github.com/callmefeifei/SvnHack)
 
-		- [SvnExploit](https://github.com/admintony/svnExploit)
+			- [SvnExploit](https://github.com/admintony/svnExploit)
 
-		- [Seay SVN](https://www.lanzoux.com/iY8i6hkptqh)
+			- [Seay SVN](https://www.lanzoux.com/iY8i6hkptqh)
 
-		- [dvcs-ripper](https://github.com/kost/dvcs-ripper)
+			- [dvcs-ripper](https://github.com/kost/dvcs-ripper)
 
-		- [Dumpall](https://github.com/0xHJK/dumpall)
+			- [Dumpall](https://github.com/0xHJK/dumpall)
 
-- HG 源码泄露
+	- HG 源码泄露
 
-	- 介绍
+		- 介绍
 
-	- 漏洞利用工具
+		- 漏洞利用工具
 
-		- [dvcs-ripper](https://github.com/kost/dvcs-ripper)
+			- [dvcs-ripper](https://github.com/kost/dvcs-ripper)
 
-- CVS 泄露
+	- CVS 泄露
 
-	- 介绍
+		- 介绍
 
-	- 漏洞利用工具
+		- 漏洞利用工具
 
-		- [dvcs-ripper](https://github.com/kost/dvcs-ripper)
+			- [dvcs-ripper](https://github.com/kost/dvcs-ripper)
 
-- Bazaar/bzr 泄露
+	- Bazaar/bzr 泄露
 
-	- 介绍
+		- 介绍
 
-	- 漏洞利用工具
+		- 漏洞利用工具
 
-		- [dvcs-ripper](https://github.com/kost/dvcs-ripper)
+			- [dvcs-ripper](https://github.com/kost/dvcs-ripper)
 
-- DS_Store 泄露
+	- DS_Store 泄露
 
-	- 介绍
+		- 介绍
 
-	- 漏洞利用工具
+		- 漏洞利用工具
 
-		- [Dumpall](https://github.com/0xHJK/dumpall)
+			- [Dumpall](https://github.com/0xHJK/dumpall)
 
-		- [ds_store_exp](https://github.com/lijiejie/ds_store_exp)
+			- [ds_store_exp](https://github.com/lijiejie/ds_store_exp)
 
-- 备份文件 泄露
+	- 备份文件 泄露
 
-	- 介绍
+		- 介绍
 
-	- 漏洞利用工具
+		- 漏洞利用工具
 
-		- [御剑](https://github.com/foryujian/yjdirscan)
+			- [御剑](https://github.com/foryujian/yjdirscan)
 
-		- [dirsearch](https://github.com/maurosoria/dirsearch)
+			- [dirsearch](https://github.com/maurosoria/dirsearch)
 
-- WEB-INF/web.xml 泄露
+	- WEB-INF/web.xml 泄露
 
-	- 介绍
+		- 介绍
 
-	- 漏洞利用
+		- 漏洞利用
 
-- vim文件 泄露
+	- vim文件 泄露
 
-	- 介绍
+		- 介绍
 
-	- 漏洞利用
+		- 漏洞利用
 
-- 利用PHP进行文件读取
+- 文件读取漏洞
 
-  - 函数
+	- [路径穿梭](file:E:\学习\CTF_web_study\01-信息收集\02-文件读取\04-文件读取漏洞\01-路径穿梭.md)
 
-  	- scandir
+		- [原理](https://blog.csdn.net/angry_program/category_9990662.html)
 
-  	- showsource
+		- 攻击技巧
 
-  	- readfile
+			- 相对路径遍历
 
-  	- system
+			- 绝对路径遍历
 
-  		- nl
+			- 双写绕过
 
-  		- cat
+			- 编码绕过
 
-  		- system("find / -name "*flag"")
+				- URL编码绕过
 
-  - 伪协议
+				- Unicode编码绕过
+
+			- 非常规组合
+
+			- 绝对路径配合../
+
+			- 截断文件后缀
+
+			- 目录限定绕过
+
+	- [PHP文件读取](file:E:\学习\CTF_web_study\01-信息收集\02-文件读取\04-文件读取漏洞\02-PHP文件读取.md)
+
+		- 相关函数
+
+			- 命令执行函数
+
+				- system() 
+
+				- exec() 
+
+				- shell_exec()或` `
+
+				- passthru() 
+
+				- pcntl_exec()
+
+				- popen()/proc_open() 
+
+			- 输出函数
+
+				- cat
+
+				- tac
+
+				- nl
+
+				- more
+
+				- less
+
+				- head
+
+				- tail
+
+				- sort
+
+				- uniq
+
+				- od
+
+				- strings
+
+				- paste
+
+				- grep
+
+				- vim
+
+				- sed
+
+			- 文件读取函数
+
+				- readfile($filename)
+
+				- highlight_file($filename)
+
+				- show_source($filename)
+
+				- base64_decode()
+
+				- strrev()
+
+				- print_r(php_strip_whitespace($filename));
+
+				- print_r(file_get_contents($filename));
+
+				- print_r(file($filename));
+
+				- fread(fopen($filename,"r"), $size);
+
+				- include（）
+
+				- fpassthru(fopen($filename, "r")); 
+
+				- print_r(fgetss(fopen($filename, "r")));
+
+			- 目录扫描函数
+
+				- scandir()
+
+				- getcwd()
+
+				- glob()
+
+				- dir()
+
+				- opendir
+
+		- 伪协议
+
+			- php://filter
+
+				- 协议参数
+
+				- 常用伪协议
+
+				- 过滤器
+
+					- 字符过滤器
+
+						- string.rot13
+
+						- string.toupper
+
+						- string.tolower
+
+						- string.strip_tags
+
+					- 转换过滤器
+
+						- convert.base64-encode & convert.base64-decode
+
+						- convert.quoted-printable-encode & convert.quoted-printable-decode
+
+					- 压缩过滤器
+
+					- 加密过滤器
+
+			- data://
+
+				- 伪协议的格式
+
+				- 类型扩展
+
+			- file://
+
+			- php://
+
+			- php://input
+
+			- zip://
+
+		- 无参数RCE
+
+			- 相关函数介绍
+
+			- 数组移动操作
+
+			- 常用RCE
 
 ## XSS漏洞
 
@@ -490,32 +638,6 @@
 - require()
 
 - require_once()
-
-## 文件读取漏洞
-
-### [路径穿梭](https://blog.csdn.net/angry_program/category_9990662.html)
-
-### 代码审计
-
-- file_get_contents()
-
-- highlight_file()
-
-- fopen()
-
-- readfile()
-
-- fread()
-
-- fgetss()
-
-- fgets()
-
-- parse_ini_file()
-
-- show_source()
-
-- file()
 
 ## 命令执行漏洞
 
